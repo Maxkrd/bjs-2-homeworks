@@ -8,9 +8,7 @@ function solveEquation(a, b, c) {
     arr[1] = (-b - Math.sqrt(d) )/(2*a);
   } else if (d === 0) {
       arr[0] = -b/(2*a);
-  } else {
-  
-  }
+  } 
   return arr;
 }
 
@@ -18,13 +16,7 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let P;
   let loanBody;
   let monthlyFee;
-  if (isNaN(percent)) {
-    return false;
-  } else if (isNaN(contribution)) {
-    return false;
-  } else if (isNaN(amount)) {
-    return false;
-  } else if (isNaN(countMonths)) {
+  if (isNaN(percent) || isNaN(contribution) || isNaN(amount) || isNaN(countMonths)) {
     return false;
   } else {
     P = percent / 100 / 12;
